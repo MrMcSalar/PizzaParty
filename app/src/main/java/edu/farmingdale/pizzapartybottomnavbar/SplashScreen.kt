@@ -36,10 +36,9 @@ fun SplashScreen(navController: NavHostController) {
         delay(3000)
         navController.navigate(BottomNavigationItems.PizzaScreen.route)
     }
-// This was column, but box works to center it with fillMaxSize in center alignment
-    Box(
-        contentAlignment = Alignment.Center,
-        modifier = Modifier.fillMaxSize()) {
+
+    Column(modifier = Modifier.fillMaxSize()
+        .wrapContentSize(Alignment.Center)){
         Image(
             painter = painterResource(id = R.drawable.fsclogo),
             contentDescription = ""
