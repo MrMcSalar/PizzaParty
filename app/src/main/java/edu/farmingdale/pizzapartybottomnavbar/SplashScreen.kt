@@ -20,8 +20,6 @@ import androidx.navigation.NavHostController
 import kotlinx.coroutines.delay
 
 
-// ToDo 1: The splash screen should have the image displayed in the center of the screen.
-
 @Composable
 fun SplashScreen(navController: NavHostController) {
 
@@ -38,10 +36,14 @@ fun SplashScreen(navController: NavHostController) {
         delay(3000)
         navController.navigate(BottomNavigationItems.PizzaScreen.route)
     }
-
-    Column (modifier = Modifier
-        .wrapContentSize(Alignment.Center)){
-        Image(painter = painterResource(id = R.drawable.fsclogo), contentDescription ="" )
+// This was column, but box works to center it with fillMaxSize in center alignment
+    Box(
+        contentAlignment = Alignment.Center,
+        modifier = Modifier.fillMaxSize()) {
+        Image(
+            painter = painterResource(id = R.drawable.fsclogo),
+            contentDescription = ""
+        )
     }
 }
 
