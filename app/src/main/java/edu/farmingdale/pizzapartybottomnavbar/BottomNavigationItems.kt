@@ -21,7 +21,7 @@ sealed class BottomNavigationItems(
         icon = Icons.Outlined.ShoppingCart
     )
     object GpaAppScreen : BottomNavigationItems(
-        route = "gpaappscreen",
+        route = "GpaAppScreen",
         title = "Gpa App",
         icon = Icons.Default.CheckCircle
     )
