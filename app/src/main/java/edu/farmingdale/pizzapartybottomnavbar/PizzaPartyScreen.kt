@@ -15,10 +15,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import kotlin.math.ceil
 
-// ToDo 6: Add another level of hunger that is Hungry that is in between Medium and Very hungry
-// New hunger level: Hungry
 
-// ViewModel class for Pizza Party
 class PizzaPartyViewModel : ViewModel() {
     var totalPizzas by mutableStateOf(0)
         private set
